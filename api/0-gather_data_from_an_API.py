@@ -4,8 +4,10 @@ import requests
 import json
 from sys import argv
 
-resp_todos = requests.get('https://jsonplaceholder.typicode.com/todos/')
-resp_users = requests.get('https://jsonplaceholder.typicode.com/users')
+if __name__ == '__main__':
+    resp_todos = requests.get('https://jsonplaceholder.typicode.com/todos/')
+    resp_users = requests.get('https://jsonplaceholder.typicode.com/users')
+
 
 t, d = 0, 0
 for i in resp_todos.json():
