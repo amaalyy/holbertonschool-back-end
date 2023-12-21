@@ -20,4 +20,3 @@ if __name__ == '__main__':
         json_dic[i['id']] = json_list
     with open("todo_all_employees.json", 'w') as f:
         json.dump(json_dic, f)
-    
