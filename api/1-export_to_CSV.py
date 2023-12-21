@@ -15,4 +15,5 @@ if __name__ == '__main__':
     with open(f'{argv[1]}.csv', 'w') as f:
         for i in resp_todos.json():
             if i['userId'] == int(argv[1]):
-                csv.writer(f).writerow(f"{argv[1]} {emp} {i['completed']} {i['title']}")
+                csv.writer(f).writerow(
+                    f"{argv[1]} {emp} {i['completed']} {i['title']}")
