@@ -15,9 +15,9 @@ if __name__ == '__main__':
         for j in resp_todos.json():
             small_dic = {}
             if i['id'] == j['userId']:
-                small_dic["username"] = j['username']
+                small_dic["username"] = i['username']
                 small_dic["completed"] = j['completed']
-                small_dic["task"] = i['title']
+                small_dic["task"] = j['title']
         json_list.append(small_dic)
         json_dic[i['id']] = json_list
     with open("todo_all_employees.json", 'w') as f:
